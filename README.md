@@ -1,4 +1,6 @@
-# structured-llm-extraction
+# bj-structured-llm-extraction
+
+[![CI](https://github.com/jacksobk/bj-structured-llm-extraction/actions/workflows/ci.yml/badge.svg)](https://github.com/jacksobk/bj-structured-llm-extraction/actions/workflows/ci.yml)
 
 A TypeScript / **NestJS** microservice that extracts **validated, structured
 data** from freeform text using an LLM — with a deterministic verification layer
