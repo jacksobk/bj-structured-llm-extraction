@@ -22,7 +22,7 @@ export interface SafetyResult {
 }
 
 const INJECTION_PATTERNS: { label: string; pattern: RegExp }[] = [
-  { label: 'override_instructions', pattern: /ignore (all |the |your |previous |above )?(instructions|prompt|rules)/i },
+  { label: 'override_instructions', pattern: /(ignore|disregard)\b[\w\s]{0,30}?\b(instructions|prompt|rules|system message)/i },
   { label: 'reveal_prompt', pattern: /(reveal|show|print|repeat|expose).{0,20}(system )?(prompt|instructions)/i },
   { label: 'role_reassignment', pattern: /you are (now|actually) (a|an|the)\b/i },
   { label: 'developer_mode', pattern: /(developer|debug|jailbreak|dan) mode/i },
