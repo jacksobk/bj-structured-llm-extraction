@@ -1,0 +1,14 @@
+services:
+  extract:
+    build: .
+    ports:
+      - "8210:8210"
+    container_name: bj-backend-extract
+    restart: unless-stopped
+    volumes:
+      - ./logs:/code/logs
+    env_file:
+      - .env
+    environment:
+      - APP_ENVIRONMENT=PROD
+      - PORT=8210
